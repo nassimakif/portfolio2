@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-poppins);
+  --font-mono: var(--font-space-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  cursor: none !important;
+}
+
+body {
+  background-color: #151312;
+  color: #ffffff;
+  overscroll-behavior: none;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+::selection {
+  background: #c5ff41;
+  color: #151312;
+}
+
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: #151312; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); }
+
+/* Custom cursor */
+.cursor-dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 5px; height: 5px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 32px; height: 32px;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease;
+  mix-blend-mode: difference;
+}
+
+.cursor-ring.is-hovering {
+  width: 52px; height: 52px;
+  border-color: rgba(197,255,65,0.8);
+}
+
+.cursor-ring.is-hidden,
+.cursor-dot.is-hidden { opacity: 0; }
+
+.font-mono {
+  font-family: var(--font-space-mono), monospace;
+}
