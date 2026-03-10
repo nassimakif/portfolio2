@@ -95,16 +95,16 @@ export default function LeftSidebar() {
             boxShadow: "0 12px 48px rgba(0,0,0,0.22)",
           }}
         >
-          {/* Photo area — fond orange, photo originale en contain */}
+          {/* Photo area — fond orange, style photo d'identité */}
           <div
             style={{
               position: "relative",
-              height: 240,
+              height: 260,
               background: "#f46c38",
-              overflow: "hidden",
               display: "flex",
-              alignItems: "flex-start",
+              alignItems: "flex-end",
               justifyContent: "center",
+              padding: "20px 24px 0",
             }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -115,7 +115,9 @@ export default function LeftSidebar() {
                 height: "100%",
                 width: "auto",
                 display: "block",
-                /* Zéro filtre — photo 100% originale */
+                borderRadius: "10px 10px 0 0",
+                objectFit: "cover",
+                objectPosition: "top center",
               }}
             />
           </div>
@@ -134,7 +136,7 @@ export default function LeftSidebar() {
                 fontSize: 22,
                 fontWeight: 800,
                 color: "#111111",
-                letterSpacing: "-0.02em",
+                letterSpacing: "0.04em",
                 marginBottom: 14,
                 fontFamily: "var(--font-poppins)",
               }}
