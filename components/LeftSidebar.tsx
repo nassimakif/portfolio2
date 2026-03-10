@@ -95,16 +95,13 @@ export default function LeftSidebar() {
             boxShadow: "0 12px 48px rgba(0,0,0,0.22)",
           }}
         >
-          {/* Photo area — fond orange, style photo d'identité */}
+          {/* Photo area — fond orange visible autour, style photo d'identité */}
           <div
             style={{
-              position: "relative",
-              height: 260,
               background: "#f46c38",
+              padding: "20px 20px 0",
               display: "flex",
-              alignItems: "flex-end",
               justifyContent: "center",
-              padding: "20px 24px 0",
             }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -112,12 +109,12 @@ export default function LeftSidebar() {
               src="/photo-nassim-processed.jpeg"
               alt="Nassim Akif"
               style={{
-                height: "100%",
-                width: "auto",
                 display: "block",
-                borderRadius: "10px 10px 0 0",
+                width: "100%",
+                height: "220px",
                 objectFit: "cover",
                 objectPosition: "top center",
+                borderRadius: "10px 10px 0 0",
               }}
             />
           </div>
@@ -133,10 +130,10 @@ export default function LeftSidebar() {
             {/* Name */}
             <h1
               style={{
-                fontSize: 22,
+                fontSize: 23,
                 fontWeight: 800,
                 color: "#111111",
-                letterSpacing: "0.04em",
+                letterSpacing: "0.06em",
                 marginBottom: 14,
                 fontFamily: "var(--font-poppins)",
               }}
